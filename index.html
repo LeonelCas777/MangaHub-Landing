@@ -1,395 +1,118 @@
-export default function MangaHubLanding() {
-  const whatsappLink = "https://wa.me/5491100000000";
-
-  return (
-    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden">
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-black tracking-tight">
-              Manga<span className="text-red-600">Hub</span>
-            </h1>
-            <p className="text-xs text-zinc-400 tracking-[0.2em] uppercase">
-              Mayorista de Mangas
-            </p>
-          </div>
-
-          <nav className="hidden md:flex gap-8 text-sm text-zinc-300">
-            <a href="#beneficios" className="hover:text-white transition">Beneficios</a>
-            <a href="#funciona" className="hover:text-white transition">Cómo funciona</a>
-            <a href="#faq" className="hover:text-white transition">FAQ</a>
-          </nav>
-
-          <a
-            href={whatsappLink}
-            target="_blank"
-            className="bg-white text-black px-5 py-3 rounded-xl text-sm font-semibold hover:scale-105 transition"
-          >
-            Contactar por WhatsApp
-          </a>
-        </div>
-      </header>
-
-      {/* HERO */}
-      <section className="relative pt-40 pb-24 px-6 border-b border-zinc-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,#dc2626,transparent_35%)]" />
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-          <div>
-            <p className="text-red-500 uppercase tracking-[0.25em] text-sm mb-4">
-              Venta mayorista de mangas
-            </p>
-
-            <h2 className="text-5xl md:text-7xl font-black leading-none mb-8">
-              Empezá a vender mangas al por mayor.
-            </h2>
-
-            <p className="text-zinc-300 text-lg leading-relaxed max-w-xl mb-10">
-              Trabajamos con emprendedores, tiendas y revendedores de todo el país.
-              Accedé a novedades semanales, catálogo y atención personalizada.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                className="bg-red-600 hover:bg-red-700 transition px-8 py-5 rounded-2xl font-bold text-center text-lg"
-              >
-                Consultar por WhatsApp
-              </a>
-
-              <a
-                href="#beneficios"
-                className="border border-zinc-700 hover:border-white transition px-8 py-5 rounded-2xl text-center text-lg"
-              >
-                Ver más
-              </a>
-            </div>
-
-            <div className="mt-8 flex gap-6 text-sm text-zinc-400">
-              <span>✔ Envíos nacionales</span>
-              <span>✔ Compra por volumen</span>
-              <span>✔ Atención personalizada</span>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-5 bg-red-600/20 blur-3xl rounded-full" />
-            <img
-              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
-              alt="MangaHub"
-              className="relative rounded-3xl border border-zinc-800 object-cover w-full h-[600px] shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFICIOS */}
-      <section id="beneficios" className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-3">
-              Beneficios
-            </p>
-
-            <h3 className="text-4xl md:text-5xl font-black">
-              Todo lo que necesitás para crecer.
-            </h3>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Compra por volumen",
-                text: "Accedé a mejores condiciones comprando por cantidad.",
-              },
-              {
-                title: "Envíos a todo el país",
-                text: "Despachamos pedidos semanalmente a distintas localidades.",
-              },
-              {
-                title: "Atención personalizada",
-                text: "Te acompañamos durante todo el proceso.",
-              },
-              {
-                title: "Novedades semanales",
-                text: "Trabajamos constantemente con nuevos lanzamientos.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 hover:border-red-600 transition"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-red-600/20 flex items-center justify-center mb-6">
-                  <div className="w-6 h-6 bg-red-600 rounded-full" />
-                </div>
-
-                <h4 className="text-2xl font-bold mb-4">{item.title}</h4>
-                <p className="text-zinc-400 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OPORTUNIDAD */}
-      <section className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-              alt="Negocio manga"
-              className="rounded-3xl border border-zinc-800"
-            />
-          </div>
-
-          <div>
-            <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-              Oportunidad
-            </p>
-
-            <h3 className="text-4xl md:text-6xl font-black leading-tight mb-8">
-              El manga no para de crecer.
-            </h3>
-
-            <p className="text-zinc-300 text-lg leading-relaxed mb-10">
-              Cada vez más personas buscan mangas, novedades y títulos para coleccionar.
-              MangaHub nace para ayudar a emprendedores y tiendas a desarrollar su proyecto de forma profesional.
-            </p>
-
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                "Alta demanda",
-                "Público fiel",
-                "Negocio escalable",
-                "Títulos semanales",
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-zinc-950 border border-zinc-800 rounded-2xl p-5"
-                >
-                  <p className="font-semibold">{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* COMO FUNCIONA */}
-      <section id="funciona" className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-            Cómo funciona
-          </p>
-
-          <h3 className="text-4xl md:text-5xl font-black mb-20">
-            Un proceso simple y rápido.
-          </h3>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              "Nos contactás",
-              "Te asesoramos",
-              "Armás tu pedido",
-              "Lo enviamos",
-            ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="w-20 h-20 mx-auto rounded-full bg-red-600 flex items-center justify-center text-2xl font-black mb-6">
-                  {index + 1}
-                </div>
-
-                <h4 className="text-xl font-bold mb-3">{step}</h4>
-
-                <p className="text-zinc-400 text-sm leading-relaxed">
-                  Atención personalizada y seguimiento durante todo el proceso.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CLIENTES */}
-      <section className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-              Comunidad
-            </p>
-
-            <h3 className="text-4xl md:text-5xl font-black">
-              Trabajamos con distintos proyectos.
-            </h3>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "Emprendedores",
-              "Tiendas online",
-              "Anime stores",
-              "Revendedores",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-                  alt={item}
-                  className="h-52 w-full object-cover"
-                />
-
-                <div className="p-6">
-                  <h4 className="text-2xl font-bold mb-3">{item}</h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed">
-                    Personas y negocios que buscan crecer dentro del rubro manga.
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GALERIA */}
-      <section className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-            Catálogo
-          </p>
-
-          <h3 className="text-4xl md:text-5xl font-black mb-16">
-            Los mangas que tu negocio necesita.
-          </h3>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <img
-                key={index}
-                src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop"
-                alt="Mangas"
-                className="rounded-2xl h-72 object-cover border border-zinc-800 hover:scale-105 transition"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="py-24 px-6 border-b border-zinc-900">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-              FAQ
-            </p>
-
-            <h3 className="text-4xl md:text-5xl font-black">
-              Preguntas frecuentes.
-            </h3>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              "¿Hacen envíos a todo el país?",
-              "¿Necesito local físico para empezar?",
-              "¿Cómo funcionan los pedidos?",
-              "¿Trabajan novedades semanales?",
-              "¿Cómo puedo consultar?",
-            ].map((faq, index) => (
-              <div
-                key={index}
-                className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6"
-              >
-                <h4 className="text-xl font-semibold">{faq}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
-      <section className="relative py-32 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#dc2626,transparent_40%)] opacity-20" />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <p className="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">
-            Es tu momento
-          </p>
-
-          <h3 className="text-5xl md:text-7xl font-black leading-none mb-8">
-            Sumate a MangaHub.
-          </h3>
-
-          <p className="text-zinc-300 text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-            Empezá a desarrollar tu proyecto con un catálogo pensado para emprendedores y tiendas de todo el país.
-          </p>
-
-          <a
-            href={whatsappLink}
-            target="_blank"
-            className="inline-block bg-red-600 hover:bg-red-700 transition px-12 py-6 rounded-2xl font-black text-xl"
-          >
-            Quiero consultar por WhatsApp
-          </a>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-zinc-900 py-12 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
-          <div>
-            <h4 className="text-2xl font-black mb-4">
-              Manga<span className="text-red-600">Hub</span>
-            </h4>
-
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Venta mayorista de mangas para emprendedores y tiendas de todo el país.
-            </p>
-          </div>
-
-          <div>
-            <h5 className="font-bold mb-4">Navegación</h5>
-            <div className="space-y-2 text-zinc-400 text-sm">
-              <p>Inicio</p>
-              <p>Beneficios</p>
-              <p>Cómo funciona</p>
-              <p>FAQ</p>
-            </div>
-          </div>
-
-          <div>
-            <h5 className="font-bold mb-4">Contacto</h5>
-            <div className="space-y-2 text-zinc-400 text-sm">
-              <p>WhatsApp</p>
-              <p>Instagram</p>
-              <p>Email</p>
-            </div>
-          </div>
-
-          <div>
-            <h5 className="font-bold mb-4">Seguinos</h5>
-            <div className="space-y-2 text-zinc-400 text-sm">
-              <p>@mangahub.ok</p>
-            </div>
-          </div>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MangaHub | Mayorista de Mangas</title>
+    <meta
+      name="description"
+      content="Venta mayorista de mangas para emprendedores y tiendas. Consultá por WhatsApp y recibí catálogo actualizado."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white min-h-screen font-sans overflow-x-hidden">
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl font-black tracking-tight">Manga<span class="text-red-600">Hub</span></h1>
+          <p class="text-xs text-zinc-400 tracking-[0.2em] uppercase">Mayorista de Mangas</p>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-zinc-900 text-zinc-500 text-sm flex flex-col md:flex-row justify-between gap-4">
-          <p>© 2026 MangaHub. Todos los derechos reservados.</p>
-          <p>Diseñado para captar leads vía WhatsApp.</p>
-        </div>
-      </footer>
+        <nav class="hidden md:flex gap-8 text-sm text-zinc-300">
+          <a href="#beneficios" class="hover:text-white transition">Beneficios</a>
+          <a href="#funciona" class="hover:text-white transition">Cómo funciona</a>
+          <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </nav>
 
-      {/* WHATSAPP FLOAT */}
-      <a
-        href={whatsappLink}
-        target="_blank"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 transition w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-black font-black text-xl"
-      >
-        WA
-      </a>
-    </div>
-  );
-}
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-5 py-3 rounded-xl text-sm font-semibold hover:scale-105 transition">Contactar por WhatsApp</a>
+      </div>
+    </header>
+
+    <section class="relative pt-40 pb-24 px-6 border-b border-zinc-900 overflow-hidden">
+      <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,#dc2626,transparent_35%)]"></div>
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div>
+          <p class="text-red-500 uppercase tracking-[0.25em] text-sm mb-4">Venta mayorista de mangas</p>
+          <h2 class="text-5xl md:text-7xl font-black leading-none mb-8">Empezá a vender mangas al por mayor.</h2>
+          <p class="text-zinc-300 text-lg leading-relaxed max-w-xl mb-10">Trabajamos con emprendedores, tiendas y revendedores de todo el país. Accedé a novedades semanales, catálogo y atención personalizada.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 transition px-8 py-5 rounded-2xl font-bold text-center text-lg">Consultar por WhatsApp</a>
+            <a href="#beneficios" class="border border-zinc-700 hover:border-white transition px-8 py-5 rounded-2xl text-center text-lg">Ver más</a>
+          </div>
+          <div class="mt-8 flex gap-6 text-sm text-zinc-400">
+            <span>✔ Envíos nacionales</span><span>✔ Compra por volumen</span><span>✔ Atención personalizada</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-5 bg-red-600/20 blur-3xl rounded-full"></div>
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="MangaHub" class="relative rounded-3xl border border-zinc-800 object-cover w-full h-[600px] shadow-2xl" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="py-24 px-6 border-b border-zinc-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-red-500 uppercase tracking-[0.2em] text-sm mb-3">Beneficios</p>
+          <h3 class="text-4xl md:text-5xl font-black">Todo lo que necesitás para crecer.</h3>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="benefits-grid"></div>
+      </div>
+    </section>
+
+    <section id="funciona" class="py-24 px-6 border-b border-zinc-900">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">Cómo funciona</p>
+        <h3 class="text-4xl md:text-5xl font-black mb-20">Un proceso simple y rápido.</h3>
+        <div class="grid md:grid-cols-4 gap-8" id="steps-grid"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-24 px-6 border-b border-zinc-900">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-red-500 uppercase tracking-[0.2em] text-sm mb-4">FAQ</p>
+          <h3 class="text-4xl md:text-5xl font-black">Preguntas frecuentes.</h3>
+        </div>
+        <div class="space-y-6" id="faq-grid"></div>
+      </div>
+    </section>
+
+    <footer class="border-t border-zinc-900 py-12 px-6">
+      <div class="max-w-7xl mx-auto mt-2 text-zinc-500 text-sm flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 MangaHub. Todos los derechos reservados.</p>
+        <p>Diseñado para captar leads vía WhatsApp.</p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversación de WhatsApp con MangaHub" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 transition w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-black font-black text-xl">WA</a>
+
+    <script>
+      const benefits = [
+        { title: 'Compra por volumen', text: 'Accedé a mejores condiciones comprando por cantidad.' },
+        { title: 'Envíos a todo el país', text: 'Despachamos pedidos semanalmente a distintas localidades.' },
+        { title: 'Atención personalizada', text: 'Te acompañamos durante todo el proceso.' },
+        { title: 'Novedades semanales', text: 'Trabajamos constantemente con nuevos lanzamientos.' }
+      ];
+      const steps = ['Nos contactás', 'Te asesoramos', 'Armás tu pedido', 'Lo enviamos'];
+      const faqs = ['¿Hacen envíos a todo el país?', '¿Necesito local físico para empezar?', '¿Cómo funcionan los pedidos?', '¿Trabajan novedades semanales?', '¿Cómo puedo consultar?'];
+
+      document.getElementById('benefits-grid').innerHTML = benefits.map(item => `
+        <article class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 hover:border-red-600 transition">
+          <div class="w-14 h-14 rounded-2xl bg-red-600/20 flex items-center justify-center mb-6"><div class="w-6 h-6 bg-red-600 rounded-full"></div></div>
+          <h4 class="text-2xl font-bold mb-4">${item.title}</h4>
+          <p class="text-zinc-400 leading-relaxed">${item.text}</p>
+        </article>`).join('');
+
+      document.getElementById('steps-grid').innerHTML = steps.map((step, index) => `
+        <article class="relative">
+          <div class="w-20 h-20 mx-auto rounded-full bg-red-600 flex items-center justify-center text-2xl font-black mb-6">${index + 1}</div>
+          <h4 class="text-xl font-bold mb-3">${step}</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Atención personalizada y seguimiento durante todo el proceso.</p>
+        </article>`).join('');
+
+      document.getElementById('faq-grid').innerHTML = faqs.map(faq => `
+        <article class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6"><h4 class="text-xl font-semibold">${faq}</h4></article>`).join('');
+    </script>
+  </body>
+</html>
